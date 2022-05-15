@@ -74,9 +74,6 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    // background-color: rgb(61, 99, 111);
-  }
   .content {
     flex-direction: column;
   }
@@ -90,6 +87,6 @@ h1 {
   }
 
   h1 {
-    font-size: 20vh;
+    font-size: 16vh;
   }
 }
