@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Tungsten";
+  src: url("../fonts/Tungsten Condensed Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #1f1f1f;
+  background-color: white;
+  /* background-color: #60b347; */
+}
+
+h1 {
+  font-family: "Tungsten";
+  font-size: 24vh;
+  line-height: 75%;
+  text-transform: uppercase;
+  letter-spacing: -0.2rem;
+  margin-right: 4.8rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.logo-container {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.logo {
+  width: 384px;
+  height: 3204px;
+  background: url("../static/logos.svg") repeat-y;
+  -webkit-animation: slide 12s linear infinite;
+          animation: slide 12s linear infinite;
+}
+
+.logo-mob {
+  display: none;
+  margin-bottom: 4rem;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1602px);
+            transform: translateY(-1602px);
+    /* The image width */
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1602px);
+            transform: translateY(-1602px);
+    /* The image width */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .logo-container {
+    display: none;
+  }
+  .logo-mob {
+    display: unset;
+  }
+  h1 {
+    font-size: 20vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
