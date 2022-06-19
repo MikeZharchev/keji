@@ -27,9 +27,7 @@ h1 {
   line-height: 75%;
   text-transform: uppercase;
   letter-spacing: -0.01em;
-  margin-right: 4.8rem;
   margin-top: 2.6rem;
-  //   text-align: center;
 }
 
 .container {
@@ -42,7 +40,6 @@ h1 {
 
 .content {
   display: flex;
-  //   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -54,8 +51,10 @@ h1 {
 }
 
 .logo {
-  width: 384px;
+  // width: 384px;
+  width: 380px;
   height: 3204px;
+  margin-right: 4rem;
   background: url("../static/logos.svg") repeat-y;
   animation: slide 12s linear infinite;
 }
@@ -63,6 +62,14 @@ h1 {
 .logo-mob {
   display: none;
   margin-bottom: 4rem;
+}
+
+.app-image-container {
+  width: 40rem;
+  height: 80vh;
+  background-image: url(/static/app.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes slide {
