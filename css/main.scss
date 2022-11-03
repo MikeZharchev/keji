@@ -16,9 +16,44 @@ html {
 
 body {
   // font-family: 'Press Start 2P', sans-serif;
-  color: #1f1f1f;
+  color: #000;
   background-color: rgb(255, 255, 255);
   /* background-color: #60b347; */
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.header {
+  width: 100vw;
+  // background-color: red;
+  height: 9.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100vw;
+  // background-color: red;
+  height: 9.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-between;
 }
 
 h1 {
@@ -37,6 +72,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .logo-mob {
@@ -48,18 +84,19 @@ h1 {
   align-items: center;
   justify-content: center;
   position: relative;
+  // gap: 10rem;
 }
 
 .logo-container {
   overflow: hidden;
-  height: 100vh;
+  width: auto;
 }
 
 .logo {
   // width: 384px;
   width: 380px;
-  height: 3204px;
-  margin-right: 4rem;
+  height: 4806px;
+  // margin-right: 4rem;
   background: url("../static/logos.svg") repeat-y;
   animation: slide 12s linear infinite;
 }
@@ -73,20 +110,60 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.btn {
+  font-family: "Tungsten";
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background-color: #000;
+  border: unset;
+  outline: none;
+  padding: 1rem 2.4rem;
+  padding-bottom: 0.3rem;
+  border-radius: 6rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    background-color: #eb5e64;
+    color: #f9e94e;
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-1602px); /* The image width */
+    transform: translateY(-1602px);
   }
 }
 
 @media only screen and (max-width: 600px) {
   .title-wrapper {
     width: 100%;
+    height: auto;
     padding: 0 4rem;
+    padding-top: 5.6rem;
     margin-bottom: 3.2rem;
+  }
+
+  .header {
+    position: relative;
+    z-index: 999;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+
+    position: relative;
+    z-index: 999;
+    margin-bottom: 4rem;
+  }
+
+  a,
+  p {
+    font-size: 2.8rem;
   }
 
   .container {
@@ -113,5 +190,8 @@ h1 {
 
   .app-image-container {
     margin-bottom: 2.4rem;
+    width: 90vw;
+    // height: auto;
+    // height: auto;
   }
 }
