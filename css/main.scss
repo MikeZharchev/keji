@@ -127,22 +127,22 @@ p.desc {
 .btn {
   font-family: "Tungsten-semi";
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 60px;
   letter-spacing: 0.02em;
   color: #fff;
+  padding: 4px 20px;
   height: 7.2rem;
   max-height: 7.2rem;
   background-color: var(--text);
   border: unset;
   outline: none;
-  padding: 4px 20px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   &:hover {
     background-color: var(--bg);
     color: var(--text);
-    // outline: 2px solid var(--text);
+    outline: 2px solid var(--text);
   }
   margin-top: 2rem;
 }
