@@ -1,6 +1,18 @@
+:root {
+  --text: #000;
+  --bg: #ffffff;
+}
 @font-face {
   font-family: "Tungsten";
   src: url("../fonts/Tungsten\ Condensed\ Bold.otf");
+}
+@font-face {
+  font-family: "Tungsten-semi";
+  src: url("../fonts/Tungsten\ Compressed\ Semi.otf");
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("../fonts/Graphik-Regular.otf");
 }
 
 * {
@@ -15,23 +27,24 @@ html {
 }
 
 body {
-  // font-family: 'Press Start 2P', sans-serif;
-  color: #000;
-  background-color: rgb(255, 255, 255);
-  /* background-color: #60b347; */
+  color: var(--text);
+  background-color: var(--bg);
+  position: relative;
 }
 
 p,
 a {
-  font-size: 1.6rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.4rem;
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: var(--text);
 }
 
 .header {
   width: 100vw;
   // background-color: red;
-  height: 9.6rem;
+  height: 8rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,20 +58,23 @@ a {
 .footer {
   width: 100vw;
   // background-color: red;
-  height: 9.6rem;
+  height: 8rem;
+  max-height: 8rem;
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 0 4rem;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   justify-content: space-between;
 }
 
 h1 {
   font-family: "Tungsten";
-  font-size: 24vh;
+  // font-size: 24vh;
+  // font-size: 13vw;
+  font-size: 22rem;
   font-weight: normal;
   line-height: 75%;
   text-transform: uppercase;
@@ -66,7 +82,13 @@ h1 {
   margin-top: 2.6rem;
 }
 
+p.desc {
+  font-size: 1.8rem;
+  max-width: 40ch;
+}
+
 .container {
+  padding: 0 4rem;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -77,14 +99,6 @@ h1 {
 
 .logo-mob {
   display: none;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  // gap: 10rem;
 }
 
 .logo-container {
@@ -101,34 +115,73 @@ h1 {
   animation: slide 12s linear infinite;
 }
 
-.app-image-container {
-  width: 40rem;
-  height: 80vh;
-  background-image: url(/static/app.png);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+.col {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.col--left {
+}
+.col--right {
+  // background: red;
 }
 
 .btn {
-  font-family: "Tungsten";
+  font-family: "Tungsten-semi";
   text-transform: uppercase;
-  font-size: 3.2rem;
+  font-size: 6rem;
   letter-spacing: 0.02em;
   color: #fff;
-  background-color: #000;
+  max-height: 7.2rem;
+  background-color: var(--text);
   border: unset;
   outline: none;
-  padding: 1rem 2.4rem;
+  padding: 0.3rem 2.2rem 0.4rem 2.2rem;
   padding-bottom: 0.3rem;
-  border-radius: 6rem;
+  border-radius: 1rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   &:hover {
-    background-color: #eb5e64;
-    color: #f9e94e;
+    background-color: var(--bg);
+    color: var(--text);
+    outline: 2px solid var(--text);
   }
+  margin-top: 2rem;
 }
+
+.btn--header {
+  font-size: 1.4rem;
+  font-family: "Graphik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  text-transform: unset;
+  padding: 0.9rem 1rem 1rem 1rem;
+
+  height: 3.6rem;
+  max-height: 3.6rem;
+  color: var(--text);
+  background: var(--bg);
+  outline: 1px solid var(--text);
+  border-radius: 5px;
+}
+
+.hero-img {
+  width: 70%;
+  height: auto;
+}
+
+.qr {
+  position: absolute;
+  left: 50%;
+  bottom: 3.2rem;
+  transform: translateX(-50%);
+}
+
+///////// ANIMATION //////////
 
 @keyframes slide {
   0% {
@@ -139,59 +192,63 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .title-wrapper {
+///////// MEDIA QUERIES //////////
+
+@media only screen and (max-width: 1400px) {
+  h1 {
+    font-size: 20rem;
+  }
+  .hero-img {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 17rem;
+  }
+  .hero-img {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  h1 {
+    font-size: 15rem;
+  }
+  .hero-img {
     width: 100%;
-    height: auto;
-    padding: 0 4rem;
-    padding-top: 5.6rem;
-    margin-bottom: 3.2rem;
   }
 
-  .header {
+  p.desc {
+    padding-right: 2rem;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 8rem 0;
+    padding-top: 12rem;
+    gap: 8rem;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+  .qr {
     position: relative;
-    z-index: 999;
   }
 
   .footer {
-    flex-direction: column-reverse;
-
     position: relative;
-    z-index: 999;
-    margin-bottom: 4rem;
   }
 
-  a,
-  p {
-    font-size: 2.8rem;
-  }
-
-  .container {
-    width: 100vw;
-    height: auto;
-  }
-  .content {
-    flex-direction: column;
-  }
-
-  .logo-container {
-    display: none;
-  }
-
-  .logo-mob {
-    display: unset;
-    margin-top: 2.4rem;
-  }
-
-  h1 {
-    font-weight: normal;
-    font-size: 16vh;
-  }
-
-  .app-image-container {
-    margin-bottom: 2.4rem;
-    width: 90vw;
-    // height: auto;
-    // height: auto;
+  .header {
+    padding: 0 2rem;
   }
 }
