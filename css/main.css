@@ -163,10 +163,10 @@ p.desc {
   background-color: var(--text);
   border: unset;
   outline: none;
-  padding: 0 2rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.3rem;
-  border-radius: 1rem;
+  padding: 0 20px;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  border-radius: 10px;
   cursor: pointer;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
