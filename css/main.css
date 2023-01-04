@@ -163,7 +163,8 @@ p.desc {
   background-color: var(--text);
   border: unset;
   outline: none;
-  padding: 0.3rem 2.2rem 0.4rem 2.2rem;
+  padding: 0 2rem;
+  padding-top: 0.4rem;
   padding-bottom: 0.3rem;
   border-radius: 1rem;
   cursor: pointer;
