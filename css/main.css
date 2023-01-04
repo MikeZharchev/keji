@@ -159,6 +159,7 @@ p.desc {
   font-size: 6rem;
   letter-spacing: 0.02em;
   color: #fff;
+  height: 7.2rem;
   max-height: 7.2rem;
   background-color: var(--text);
   border: unset;
@@ -285,7 +286,7 @@ p.desc {
 
 @media screen and (max-width: 480px) {
   .container {
-    padding-top: 8rem;
+    padding-top: 12rem;
   }
   h1 {
     font-size: 12rem;
