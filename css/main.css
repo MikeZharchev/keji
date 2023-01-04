@@ -313,9 +313,9 @@ form.form {
     width: 90%;
   }
   .btn {
-    display: block;
-    text-align: center;
-    margin: auto;
+    min-width: 100px;
+    min-height: 30px;
+    display: inline;
   }
 }
 /*# sourceMappingURL=main.css.map */
