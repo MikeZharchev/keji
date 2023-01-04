@@ -166,8 +166,8 @@ p.desc {
   letter-spacing: 0.02em;
   color: var(--yellow);
   padding: 4px 20px;
-  height: 7.2rem;
-  max-height: 7.2rem;
+  height: 7.2rem !important;
+  max-height: 7.2rem !important;
   background-color: var(--blue);
   border: unset;
   outline: none;
