@@ -142,7 +142,7 @@ p.desc {
   &:hover {
     background-color: var(--bg);
     color: var(--text);
-    outline: 2px solid var(--text);
+    border: 2px solid var(--text);
   }
   margin-top: 2rem;
 }
