@@ -163,9 +163,7 @@ p.desc {
   background-color: var(--text);
   border: unset;
   outline: none;
-  padding: 0 20px;
-  padding-top: 4px;
-  padding-bottom: 3px;
+  padding: 4px 20px;
   border-radius: 10px;
   cursor: pointer;
   -webkit-transition: all 0.1s ease-in-out;
@@ -176,7 +174,6 @@ p.desc {
 .btn:hover {
   background-color: var(--bg);
   color: var(--text);
-  outline: 2px solid var(--text);
 }
 
 .btn--header {
