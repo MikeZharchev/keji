@@ -261,20 +261,19 @@ p.desc {
 @media only screen and (max-width: 900px) {
   .container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     width: 100%;
     height: auto;
     padding: 8rem 0;
     padding-top: 12rem;
-    gap: 8rem;
   }
   .col {
     width: 100%;
   }
   .hero-img {
-    width: 80%;
+    width: 50%;
   }
   .qr {
     position: relative;
